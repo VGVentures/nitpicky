@@ -1,0 +1,7 @@
+name: nitpicky
+version: 1.0.0
+description: How to get the most value from Dart static analysis.
+homepage: https://github.com/VGVentures/nitpicky
+
+environment:
+  sdk: '>=2.1.1-dev.0.0 <3.0.0'
