@@ -1,8 +1,0 @@
-#!/bin/sh -e
-
-# Copy this file to .git/hooks/pre-commit and mark it executable.
-# To skip execution, run `git commit --no-verify`.
-
-tool/analyze
-tool/fmt
-#tool/test
