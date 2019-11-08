@@ -1,37 +1,42 @@
 # nitpicky
 
-This package is a fork of [pedantic][] for VGV Dart/Flutter style.
+This package contains the `analysis_options.yaml` file to configure 
+the Dart analyzer for VGV Dart/Flutter style.
 
+It enables more lints than [pedantic][], and can be used alongside it. 
 See that package for more information.
 
 [pedantic]: https://pub.dev/packages/pedantic
 
-## Using the Lints
+## Usage
 
-To use the lints add a dependency in your `pubspec.yaml`:
+- Add a dev dependency in your `pubspec.yaml`:
 
 ```yaml
-# If you just want `analysis_options.yaml`, it can be a dev dependency.
 dev_dependencies:
   nitpicky: 
     git:
       url: git@github.com:VGVentures/nitpicky
-      ref: 1.0.0  # pin a specific version/branch
+      ref: 1.0.0    # specify a tag or branch
 ```
 
-Then, add an include in your `analysis_options.yaml`. If you want to always
-use the latest version of the lints, add a dependency on the main
-`analysis_options` file:
-
+- Put the following in your project's `analysis_options.yaml`:
 
 ```yaml
 include: package:nitpicky/analysis_options.yaml
+
+# or use an older version
+# include: package:nitpicky/analysis_options.1.0.0.yaml
 ```
 
-If your continuous build and/or presubmit check lints then they will likely
-fail whenever a new version of `package:nitpicky` is released. To avoid this,
-specify a specific version of `analysis_options.yaml` instead:
+## Hacking
 
-```yaml
-include: package:nitpicky/analysis_options.1.0.0.yaml
-```
+As we evolve these rules over time, we should version them by copying
+the yaml file with a new suffix and matching git tag, and updating the 
+[main `analysis_options`](lib/analysis_options.yaml) file to point to 
+the latest.  See [pedantic][pedantic-src].
+
+Retaining the old rules will allow clients to pin a specific version. 
+Otherwise, CI will fail until their code is updated.
+
+[pedantic-src]: https://github.com/dart-lang/pedantic/tree/master/lib
