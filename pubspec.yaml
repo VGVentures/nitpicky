@@ -1,6 +1,6 @@
 name: nitpicky
 version: 1.0.0
-description: How to get the most value from Dart static analysis.
+description: Dart static analysis rules used by Very Good Ventures.
 homepage: https://github.com/VGVentures/nitpicky
 
 environment:
