@@ -16,7 +16,7 @@ See that package for more information.
 dev_dependencies:
   nitpicky: 
     git:
-      url: git@github.com:VGVentures/nitpicky
+      url: https://github.com/VGVentures/nitpicky
       ref: 1.0.0    # specify a tag or branch
 ```
 
