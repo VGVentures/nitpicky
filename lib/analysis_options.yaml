@@ -10,4 +10,4 @@
 # whenever a new version of `package:nitpicky` is released. To avoid this,
 # specify a specific version of `analysis_options.yaml` instead.
 
-include: package:nitpicky/analysis_options.1.0.0.yaml
+include: package:nitpicky/analysis_options.1.0.1.yaml
